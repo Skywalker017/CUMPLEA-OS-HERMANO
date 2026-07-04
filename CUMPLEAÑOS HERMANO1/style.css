@@ -1,0 +1,148 @@
+.imagen1 img {
+    width: 40px;  /* Ajusta este número (en píxeles) para cambiar el tamaño */
+    height: auto; /* Mantiene la proporción de la imagen para que no se deforme */
+    vertical-align: middle; /* Alinea la bandera con el texto "Wilson" */
+    margin-left: 10px;      /* Le da un pequeño espacio respecto al texto */
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    /* REEMPLAZA EL GRADIENTE POR ESTAS 3 LÍNEAS: */
+    background-image: url('../IMAGENES/Fondo.jpg'); /* O la extensión que tenga tu imagen: .jpg, .jpeg, etc. */
+    background-size: cover;    /* Escala la imagen para que cubra todo el fondo sin deformarse */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-attachment: fixed; /* Opcional: deja el fondo fijo si hay scroll */    
+}
+
+.contenido {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 60px; /* Aumentado de 40px a 55px */
+    margin-bottom: 10px;
+    -webkit-text-stroke: 2px black; /* Un poco más grueso para el nuevo tamaño */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    font-size: 50px; /* Aumentado de 30px a 40px */
+    margin-bottom: 25px;
+    -webkit-text-stroke: 2.0px black;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+p {
+    font-size: 35px;
+    width: 60%;       /* Ocupará el 80% de la pantalla para no tocar los bordes */
+    max-width: 650px; /* Evita que se estire demasiado en pantallas gigantes */
+    margin: auto;
+    line-height: 1.5;
+    -webkit-text-stroke: 2.0px black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    font-weight: bold;
+}
+
+
+
+/* Cuando la pantalla mida menos de 900px de ancho */
+@media (max-width: 900px) {
+    .contenido {
+        margin-top: 30px; /* Reduce el espacio superior */
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 38px; /* Achica el título principal */
+    }
+
+    h2 {
+        font-size: 28px; /* Achica el nombre */
+    }
+
+    p {
+        font-size: 18px;  /* Achica el texto para que quepa en el espacio restante */
+        width: 90%;       /* Usa un poco más de espacio hacia los lados */
+        line-height: 1.4;
+    }
+    
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: white;
+    color: #ff4b5c;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ff4b5c;
+    color: white;
+}
+
+/* Globos */
+
+.soccers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.soccer {
+    position: absolute;
+    bottom: -150px;
+    width: 100px;          
+    height: 100px;         
+    border-radius: 50%;   
+    animation: flotar 10s infinite;
+    
+    /* URL de internet para probar si el código funciona */
+    background-image: url('../IMAGENES/Balon.png');
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+
+.soccer:nth-child(1) { left: 10%; animation-duration: 8s; }
+.soccer:nth-child(2) { left: 30%; animation-duration: 10s; }
+.soccer:nth-child(3) { left: 50%; animation-duration: 12s; }
+.soccer:nth-child(4) { left: 70%; animation-duration: 9s; }
+.soccer:nth-child(5) { left: 85%; animation-duration: 11s; }
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+/* Página pregunta */
+
+.pregunta {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+#noBtn {
+    position: relative;
+}
