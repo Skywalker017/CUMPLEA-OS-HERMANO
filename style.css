@@ -116,7 +116,7 @@ button:hover {
     animation: flotar 10s infinite;
     
     /* URL de internet para probar si el código funciona */
-    background-image: url('../IMAGENES/Balon.png');
+    background-image: url('IMAGENES/Balon.png');
     background-size: cover;
     background-position: center;
     background-color: transparent;
