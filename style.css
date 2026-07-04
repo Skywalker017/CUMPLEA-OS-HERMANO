@@ -12,10 +12,12 @@ body {
     color: white;
     overflow-x: hidden;
     
+    /* Configuración del fondo definitivo */
     background-image: url('IMAGENES/Fondo.jpg'); 
-    background-size: cover;          /* Regresa a cover */
-    background-position: top center;  /* Centra desde arriba */
-    background-attachment: scroll; /* ¡CAMBIA ESTO! Cambiado de 'fixed' a 'scroll' para que no se rompa en celulares */
+    background-position: center top;  /* Centra la imagen horizontalmente y la alinea arriba */
+    background-repeat: no-repeat;    /* ¡CLAVE! Evita que Messi se repita hacia abajo como mosaico */
+    background-size: cover;          /* Hace que la imagen cubra toda la pantalla de forma proporcional */
+    background-attachment: fixed;/* ¡CAMBIA ESTO! Cambiado de 'fixed' a 'scroll' para que no se rompa en celulares */
 }
 
 .contenido {
@@ -54,6 +56,11 @@ p {
 
 /* Cuando la pantalla mida menos de 900px de ancho */
 @media (max-width: 900px) {
+    body {
+        background-attachment: scroll; /* Desactiva el modo fijo solo en celular para evitar que se pixele o estire */
+        background-size: 100% 100vh;   /* Obliga a la imagen a medir exactamente el alto de la pantalla del celular */
+    }
+    
     .contenido {
         margin-top: 30px; /* Reduce el espacio superior */
         padding: 10px;
