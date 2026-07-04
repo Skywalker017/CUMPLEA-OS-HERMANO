@@ -15,7 +15,7 @@ body {
     background-image: url('IMAGENES/Fondo.jpg'); 
     background-size: cover;          /* Regresa a cover */
     background-position: top center;  /* Centra desde arriba */
-    background-attachment: scroll;   /* ¡CAMBIA ESTO! Cambiado de 'fixed' a 'scroll' para que no se rompa en celulares */
+    background-attachment: scroll; /* ¡CAMBIA ESTO! Cambiado de 'fixed' a 'scroll' para que no se rompa en celulares */
 }
 
 .contenido {
