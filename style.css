@@ -10,12 +10,12 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     color: white;
-    overflow: hidden;
+    overflow-x: hidden;
     /* REEMPLAZA EL GRADIENTE POR ESTAS 3 LÍNEAS: */
-    background-image: url('IMAGENES/Fondo.jpg'); /* O la extensión que tenga tu imagen: .jpg, .jpeg, etc. */
-    background-size: cover;    /* Escala la imagen para que cubra todo el fondo sin deformarse */
-    background-position: center; /* Centra la imagen en la pantalla */
-    background-attachment: fixed; /* Opcional: deja el fondo fijo si hay scroll */    
+    background-image: url('IMAGENES/Fondo.jpg'); 
+    background-size: 100% 100%; /* Obliga a la imagen a amoldarse perfectamente al ancho y alto de la pantalla */
+    background-position: center; 
+    background-attachment: fixed;
 }
 
 .contenido {
