@@ -12,11 +12,10 @@ body {
     color: white;
     overflow-x: hidden;
     
-    /* Configuración del fondo definitivo */
     background-image: url('IMAGENES/Fondo.jpg'); 
-    background-position: center top;  /* Centra la imagen horizontalmente y la alinea arriba */
-    background-repeat: no-repeat;    /* ¡CLAVE! Evita que Messi se repita hacia abajo como mosaico */
-    background-size: cover;          /* Hace que la imagen cubra toda la pantalla de forma proporcional */
+    background-position: center top;  
+    background-repeat: no-repeat;    
+    background-size: cover;          
     background-attachment: fixed;/* ¡CAMBIA ESTO! Cambiado de 'fixed' a 'scroll' para que no se rompa en celulares */
 }
 
@@ -55,34 +54,29 @@ p {
 
 
 /* Cuando la pantalla mida menos de 900px de ancho */
-@media (max-width: 900px) {
+@media screen and (max-width: 480px), screen and (max-device-width: 480px) {
     body {
-        background-attachment: scroll; /* Desactiva el modo fijo solo en celular para evitar que se pixele o estire */
-        background-size: 100% 100vh;   /* Obliga a la imagen a medir exactamente el alto de la pantalla del celular */
-    }
-    
-    .contenido {
-        margin-top: 30px; /* Reduce el espacio superior */
-        padding: 10px;
+        /* Evita que el fondo se estire infinitamente hacia abajo */
+        background-attachment: scroll;
+        background-size: 100% 100vh;
     }
 
+    /* Reducimos los balones gigantes que tapan el texto en el celular */
+    .soccer {
+        width: 40px !important;  /* Achica los balones drásticamente */
+        height: 40px !important;
+    }
+
+    /* Ajustamos los textos para que no se amontonen con los balones */
     h1 {
-        font-size: 38px; /* Achica el título principal */
+        font-size: 32px !important;
     }
-
     h2 {
-        font-size: 28px; /* Achica el nombre */
+        font-size: 26px !important;
     }
-
     p {
-        font-size: 18px;  /* Achica el texto para que quepa en el espacio restante */
-        width: 90%;       /* Usa un poco más de espacio hacia los lados */
-        line-height: 1.4;
-    }
-    
-    button {
-        font-size: 16px;
-        padding: 10px 20px;
+        font-size: 18px !important;
+        width: 85% !important;
     }
 }
 
